@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Проект отдельного согласия на обработку персональных данных для сайта «Старинная Коллекция».">
+    <script>
+        try {
+            document.documentElement.dataset.theme = localStorage.getItem('maison-antique-theme') === 'dark' ? 'dark' : 'light';
+        } catch (error) {
+            document.documentElement.dataset.theme = 'light';
+        }
+    </script>
+    <title>Согласие на обработку персональных данных — Старинная Коллекция</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/legal.css">
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+<body class="legal-page">
+    <header class="legal-header">
+        <div class="legal-shell">
+            <a class="legal-brand" href="index.html">Старинная Коллекция</a>
+            <a class="legal-back" href="index.html">Вернуться в магазин</a>
+        </div>
+    </header>
+    <main class="legal-shell legal-main">
+        <article class="legal-document">
+            <p class="legal-eyebrow">Документы магазина</p>
+            <h1>Согласие на обработку персональных данных</h1>
+            <aside class="legal-status" role="note">
+                <strong>Это текст проекта, а не полученное согласие.</strong>
+                <span>На сайте нет отдельного механизма, который фиксирует выдачу и отзыв согласия. Просмотр страницы, регистрация, отправка запроса менеджеру или существующего заказа не записываются здесь как согласие. Не используйте документ как подтверждение согласия до подключения отдельного действия пользователя и надёжной фиксации его версии, даты и факта выбора.</span>
+            </aside>
+
+            <section>
+                <h2>Проект текста</h2>
+                <p>Я, <span class="legal-placeholder">[ФИО субъекта]</span>, предоставляю согласие <span class="legal-placeholder">[полное наименование / ФИО оператора и правовой статус]</span>, адрес: <span class="legal-placeholder">[адрес оператора]</span>, на обработку перечисленных ниже данных для цели: <span class="legal-placeholder">[конкретная цель, для которой законным основанием является именно согласие]</span>.</p>
+                <p>Категории данных: <span class="legal-placeholder">[перечислить только необходимые данные]</span>. Действия с данными: <span class="legal-placeholder">[сбор, запись, систематизация, хранение, уточнение, использование, передача конкретным получателям и иные необходимые операции]</span>.</p>
+                <p>Получатели и обработчики по поручению оператора: <span class="legal-placeholder">[наименования, цели и состав передаваемых данных; включая фактический регион Supabase и хостинг]</span>. Срок действия согласия и срок хранения: <span class="legal-placeholder">[указать]</span>. Способ отзыва: <span class="legal-placeholder">[указать рабочий адрес и порядок подтверждения обращения]</span>.</p>
+                <p>До использования этого текста оператору необходимо проверить, действительно ли согласие является подходящим основанием для каждой указанной цели. Обработка данных, необходимая для заключения или исполнения заказа, должна быть описана отдельно и не должна подменяться фиктивным согласием.</p>
+            </section>
+
+            <section>
+                <h2>Что нужно для электронной формы</h2>
+                <ul>
+                    <li>Отдельное, заранее не отмеченное действие для конкретной цели — не объединённое с офертой или политикой.</li>
+                    <li>Понятная ссылка на окончательный текст согласия и зафиксированная версия документа.</li>
+                    <li>Серверная фиксация факта выбора и времени; способ отзыва и последующая обработка отзыва.</li>
+                    <li>Проверенные сведения об операторе, обработчиках, получателях и месте обработки.</li>
+                </ul>
+                <p>В клиентском коде не реализованы отдельное действие пользователя и фиксация согласия. Перед подключением такой формы проверьте и спроектируйте серверное хранение записи, версии документа и времени выбора. Не добавляйте чекбокс, который выглядит как согласие, если приложение не сохраняет его факт и содержание.</p>
+            </section>
+
+            <p class="legal-updated">Связанная информация: <a href="privacy-policy.html">Политика обработки персональных данных</a>.</p>
+        </article>
+        <nav class="legal-document-nav" aria-label="Другие документы">
+            <a href="privacy-policy.html">Политика обработки персональных данных</a>
+            <a href="public-offer.html">Условия продажи — проект оферты</a>
+        </nav>
+    </main>
+    <footer class="legal-footer"><div class="legal-shell"><a href="index.html">Старинная Коллекция</a><a href="mailto:info@antique-shop.ru">Связаться с магазином</a></div></footer>
+</body>
+</html>

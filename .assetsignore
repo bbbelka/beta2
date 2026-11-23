@@ -1,0 +1,8 @@
+wrangler.toml
+README*
+*.sql
+tests/
+supabase/
+.git/
+.github/
+node_modules/

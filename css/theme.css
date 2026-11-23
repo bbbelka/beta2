@@ -1,0 +1,245 @@
+.profile-photo-theme-row {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(0, 1.3fr) minmax(220px, .7fr);
+    align-items: stretch;
+    gap: 1rem;
+}
+
+#view-lk .lk-profile-edit-grid > .lk-form-group:first-child {
+    grid-column: 1 / -1;
+}
+
+.theme-setting {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .8rem 1rem;
+    border: 1px solid var(--ds-color-border);
+    border-radius: var(--ds-radius-sm);
+    background: var(--ds-color-surface-subtle);
+}
+
+.theme-setting-copy {
+    display: grid;
+    gap: .25rem;
+}
+
+.theme-setting-title {
+    color: var(--ds-color-text);
+    font: 600 .85rem/1.35 var(--ds-font-family);
+}
+
+.theme-setting-state {
+    color: var(--ds-color-text-muted);
+    font: 400 .76rem/1.35 var(--ds-font-family);
+}
+
+.theme-toggle {
+    position: relative;
+    display: inline-flex;
+    width: 54px;
+    height: 32px;
+    flex: none;
+    align-items: center;
+    padding: 3px;
+    border: 1px solid #171717;
+    border-radius: var(--ds-radius-pill);
+    background: #171717;
+    cursor: pointer;
+    transition: background-color var(--ds-duration-normal) var(--ds-ease-standard),
+        border-color var(--ds-duration-normal) var(--ds-ease-standard);
+}
+
+.theme-toggle-thumb {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 24%);
+    transform: translateX(0);
+    transition: background-color var(--ds-duration-normal) var(--ds-ease-standard),
+        transform var(--ds-duration-normal) var(--ds-ease-standard);
+}
+
+.theme-toggle[aria-checked="true"] .theme-toggle-thumb {
+    transform: translateX(22px);
+}
+
+.theme-toggle:focus-visible {
+    outline: 3px solid var(--ds-color-focus);
+    outline-offset: 3px;
+}
+
+.theme-toggle:disabled {
+    cursor: wait;
+}
+
+:root[data-theme="dark"] {
+    --paper: var(--ds-color-background);
+    --card: var(--ds-color-surface);
+    --line: var(--ds-color-border);
+    --ink: var(--ds-color-text);
+    --mute: var(--ds-color-text-muted);
+    --green: #17150f;
+    --green2: #242a25;
+}
+
+:root[data-theme="dark"] .theme-toggle {
+    border-color: #fff;
+    background: #fff;
+}
+
+:root[data-theme="dark"] .theme-toggle-thumb {
+    background: #171717;
+}
+
+:root[data-theme="dark"] #view-shop .category-btn:hover,
+:root[data-theme="dark"] #view-shop .product-card:hover,
+:root[data-theme="dark"] #view-shop .social-link:hover,
+:root[data-theme="dark"] #view-lk .lk-overview-link:hover {
+    border-color: var(--ds-color-accent);
+}
+
+:root[data-theme="dark"] #view-shop .search-box input:focus,
+:root[data-theme="dark"] #view-shop .sort-options select:focus,
+:root[data-theme="dark"] #view-shop .form-group input:focus,
+:root[data-theme="dark"] #view-shop .form-group textarea:focus,
+:root[data-theme="dark"] #view-shop .form-group select:focus,
+:root[data-theme="dark"] #view-lk .lk-form-group input:focus-visible,
+:root[data-theme="dark"] #auth-form input:focus-visible,
+:root[data-theme="dark"] #shop-chat .chat-search:focus-visible,
+:root[data-theme="dark"] #shop-chat .chat-compose textarea:focus-visible {
+    box-shadow: 0 0 0 3px rgb(219 197 142 / 24%);
+}
+
+:root[data-theme="dark"] .toast {
+    border-color: var(--ds-color-border);
+    background: var(--ds-color-surface-subtle);
+    color: var(--ds-color-text);
+}
+
+:root[data-theme="dark"] .reviews-summary {
+    color: var(--ds-color-accent);
+}
+
+:root[data-theme="dark"] #view-product .product-favorite[aria-pressed="true"] {
+    border-color: var(--ds-color-error);
+    background: var(--ds-color-error-subtle);
+}
+
+:root[data-theme="dark"] #shop-chat .chat-list-status.is-success,
+:root[data-theme="dark"] #shop-chat .chat-msg--mine {
+    border-color: var(--ds-color-success);
+    background: var(--ds-color-success-subtle);
+}
+
+:root[data-theme="dark"] #shop-chat .chat-list-status.is-error,
+:root[data-theme="dark"] #shop-chat .chat-conversation-delete:hover:not(:disabled) {
+    border-color: var(--ds-color-error);
+    background: var(--ds-color-error-subtle);
+}
+
+:root[data-theme="dark"] #shop-chat .chat-conversation[aria-current="true"] {
+    border-color: var(--ds-color-accent);
+}
+
+:root[data-theme="dark"] #shop-chat .chat-avatar {
+    background: var(--ds-color-accent-subtle);
+}
+
+:root[data-theme="dark"] #shop-chat .chat-conversation-preview {
+    color: var(--ds-color-text-muted);
+}
+
+:root[data-theme="dark"] .owner-admin-message.is-error,
+:root[data-theme="dark"] .owner-admin-load-error,
+:root[data-theme="dark"] .owner-admin-badge.is-unavailable,
+:root[data-theme="dark"] .owner-admin-badge.status-cancelled {
+    border-color: var(--ds-color-error);
+}
+
+:root[data-theme="dark"] .owner-admin-message.is-success,
+:root[data-theme="dark"] .owner-admin-badge.is-available,
+:root[data-theme="dark"] .owner-admin-badge.status-delivered {
+    border-color: var(--ds-color-success);
+}
+
+:root[data-theme="dark"] .owner-admin-badge.status-ordered,
+:root[data-theme="dark"] .owner-admin-badge.status-ready_for_pickup,
+:root[data-theme="dark"] .owner-admin-badge.status-sent,
+:root[data-theme="dark"] .owner-admin-badge.status-at_warehouse {
+    border-color: var(--ds-color-warning-border);
+    background: var(--ds-color-warning-subtle);
+    color: var(--ds-color-warning);
+}
+
+:root[data-theme="dark"] #view-lk .lk-notice-error {
+    border-color: var(--ds-color-error);
+}
+
+:root[data-theme="dark"] .legal-status {
+    border-color: var(--ds-color-warning-border);
+}
+
+:root[data-theme="dark"] .owner-admin-button--primary,
+:root[data-theme="dark"] .auth-submit,
+:root[data-theme="dark"] #shop-chat-launch,
+:root[data-theme="dark"] #shop-chat .chat-send,
+:root[data-theme="dark"] #view-shop .btn-primary,
+:root[data-theme="dark"] #view-shop .category-btn.active,
+:root[data-theme="dark"] #view-shop .btn-submit,
+:root[data-theme="dark"] #view-lk .lk-primary-btn,
+:root[data-theme="dark"] #view-product .product-add-to-cart,
+:root[data-theme="dark"] body:has(#view-product:not([hidden])) .toast {
+    color: var(--ds-color-on-accent);
+}
+
+:root.theme-transitioning::view-transition-old(root) {
+    animation: none;
+}
+
+:root.theme-transitioning::view-transition-group(root),
+:root.theme-transitioning::view-transition-group(category-page) {
+    animation-duration: 850ms;
+}
+
+:root.theme-transitioning::view-transition-new(root) {
+    z-index: 2;
+    animation: theme-wipe-reveal 850ms cubic-bezier(.22, .72, .18, 1) both;
+}
+
+:root.theme-transitioning::view-transition-old(category-page) {
+    animation: none;
+}
+
+:root.theme-transitioning::view-transition-new(category-page) {
+    z-index: 2;
+    animation: theme-wipe-reveal 850ms cubic-bezier(.22, .72, .18, 1) both;
+}
+
+@keyframes theme-wipe-reveal {
+    0% { clip-path: inset(0 0 100% 0); }
+    78% { clip-path: inset(0 0 8% 0 round 0 0 14% 14%); }
+    100% { clip-path: inset(0 0 0 0); }
+}
+
+@media (max-width: 760px) {
+    .profile-photo-theme-row {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :root.theme-transitioning::view-transition-new(root) {
+        animation-duration: 1ms;
+    }
+
+    .theme-toggle,
+    .theme-toggle-thumb {
+        transition-duration: 1ms;
+    }
+}
